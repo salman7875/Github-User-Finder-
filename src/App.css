@@ -1,38 +1,148 @@
+:root {
+  --white: #fff;
+  --grey: #eeeeee;
+  --dark-blue: #010b1ff4;
+  --light-blue: #1c283e;
+  --light-grey: #d6e4e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue);
+  position: relative;
+  font-family: sans-serif;
+  overflow-y: hidden;
+}
+
 .App {
-  text-align: center;
+  width: 700px;
+  height: 75vh;
+  margin: 100px auto;
+  padding: 56px;
+  background-color: var(--light-blue);
+  border-radius: 15px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 700px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inp--search {
+  width: 65%;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn--search {
+  width: 25%;
+  color: var(--white);
+  font-size: 18px;
+  background-color: #0096ff;
+  padding: 12px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn--search:hover {
+  box-shadow: 4px 4px 18px #45b2ff;
+}
+
+/* ----------------- DETAILS ------------------- */
+.container {
   display: flex;
-  flex-direction: column;
+  gap: 24px;
+}
+
+.user--img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user--details {
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+}
+
+.user--details .user--login {
+  color: var(--white);
+  font-size: 32px;
+  word-spacing: 5px;
+  margin-bottom: 12px;
+}
+
+.user--details .user--email {
+  color: rgb(90, 90, 255);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.user--details .user--bio {
+  color: var(--grey);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.user--details .user--joined {
+  position: absolute;
+  top: 66px;
+  right: 56px;
+  font-size: 18px;
+  color: var(--grey);
+}
+
+/* --------- FOLLOWERS ---------- */
+.inner-container {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  display: flex;
+  padding: 24px 44px;
+  gap: 86px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+
+/* --------- MORE INFO ----------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+  /* align-content: center; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  row-gap: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.location--svg,
+.twitter--svg,
+.company--svg,
+.url--svg {
+  width: 20px;
+  stroke: var(--white);
+  margin-right: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.location,
+.twitter,
+.url,
+.company {
+  color: var(--light-grey);
+  font-size: 14px;
 }
